@@ -1,0 +1,11 @@
+# Artificial Intelligence Progress Report (2023)
+
+## Introduction
+Artificial Intelligence has seen a massive surge in popularity following the release of ChatGPT in late 2022. This report summarizes the state of the industry as of mid-2023.
+
+## Large Language Models
+As of early 2023, GPT-4 is the state-of-the-art model in the industry. Other players like Google have released Bard, and Meta has released Llama 1 for research purposes. The focus is currently on scale and increasing parameter counts.
+
+
+## Conclusion
+The AI field is moving fast, and 2023 marks the beginning of the generative AI era.

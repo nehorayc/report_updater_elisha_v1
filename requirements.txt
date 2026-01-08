@@ -1,0 +1,7 @@
+streamlit
+google-genai
+google-generativeai
+python-dotenv
+requests
+pytest
+markdown
