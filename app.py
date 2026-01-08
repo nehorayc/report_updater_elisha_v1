@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-st.set_page_config(page_title="Report Updater AI", layout="wide")
+st.set_page_config(page_title="Periodic Report Generator", layout="wide", page_icon="logo.png")
 
 # Custom CSS for a premium look
 st.markdown("""
@@ -70,10 +70,15 @@ def next_step(step):
 
 # Sidebar for API Configuration
 with st.sidebar:
+    st.image("logo.png", use_container_width=True)
     st.title("Settings")
-    api_key = st.text_input("Gemini API Key", value=st.session_state.api_key, type="password")
-    if api_key:
-        st.session_state.api_key = api_key
+    api_key_input = st.text_input("Gemini API Key", value=st.session_state.api_key, type="password")
+    if api_key_input:
+        # Sanitize: Remove whitespace and non-ASCII characters (e.g. emojis) that break HTTP headers
+        clean_key = "".join(i for i in api_key_input if ord(i) < 128).strip()
+        if clean_key != api_key_input:
+            st.warning("⚠️ Removed invalid characters from API Key.")
+        st.session_state.api_key = clean_key
     
     st.divider()
     st.subheader("Research Configuration")
@@ -105,6 +110,9 @@ def regenerate_chapter(idx, instructions=None, sources_override=None):
     # Use selected sources from sidebar unless overridden
     sources = sources_override if sources_override else research_sources
     
+    # Use target length if set, otherwise original word count
+    target_length = chapter.get('target_length', chapter.get('original_word_count', 500))
+    
     with st.spinner(f"Updating '{chapter['title']}'..."):
         research_findings, sources_meta = researcher.perform_research(
             chapter['topic'], 
@@ -113,7 +121,13 @@ def regenerate_chapter(idx, instructions=None, sources_override=None):
             enabled_sources=sources
         )
         time.sleep(config.API_DELAY) # Delay to avoid rate limits
-        updated_text = updater.update_chapter(chapter['content'], research_findings, st.session_state.api_key, instructions=instructions)
+        updated_text = updater.update_chapter(
+            chapter['content'], 
+            research_findings, 
+            st.session_state.api_key, 
+            instructions=instructions,
+            target_length=target_length
+        )
         st.session_state.processed_results[idx] = updated_text
         st.session_state.source_metadata[idx] = sources_meta
     st.success(f"Regenerated {chapter['title']}")
@@ -122,7 +136,7 @@ def regenerate_chapter(idx, instructions=None, sources_override=None):
 # STATE 1: UPLOAD
 # --------------------------------------------------------------------------------
 if st.session_state.step == "UPLOAD":
-    st.title("📄 Report Updater AI")
+    st.title("📄 Periodic Report Generator")
     st.subheader("Step 1: Upload your existing report")
     
     uploaded_file = st.file_uploader("Choose a text file (.txt, .md)", type=['txt', 'md'])
@@ -146,13 +160,19 @@ if st.session_state.step == "UPLOAD":
                             "summary": "Analysis unavailable", "topic": ch['title'], "timeframe": "Unknown"
                         }
                         
+                        word_count = len(ch['content'].split())
+                        # Round to nearest 100 for the slider
+                        rounded_count = max(100, round(word_count / 100) * 100)
+                        
                         analyzed_chapters.append({
                             "id": i,
                             "title": ch['title'],
                             "content": ch['content'],
                             "summary": analysis.get('summary', 'No summary'),
                             "topic": analysis.get('summary', ch['title']), # Default topic to summary
-                            "timeframe": analysis.get('timeframe', config.DEFAULT_TIMEFRAME)
+                            "timeframe": analysis.get('timeframe', config.DEFAULT_TIMEFRAME),
+                            "original_word_count": word_count,
+                            "target_length": rounded_count
                         })
                     st.session_state.chapters = analyzed_chapters
                     status.update(label="Analysis complete!", state="complete", expanded=False)
@@ -189,7 +209,23 @@ elif st.session_state.step == "REVIEW":
                 tf = st.text_input(f"Cut-off Timeframe", value=chapter['timeframe'], key=f"tf_{i}")
                 st.session_state.chapters[i]['timeframe'] = tf
                 
-                st.caption(f"Original Summary: {chapter['summary']}")
+                # Length Slider
+                orig_count = chapter.get('original_word_count', 500)
+                # Ensure we start with a multiple of 100
+                current_target = chapter.get('target_length', round(orig_count / 100) * 100)
+                
+                target_len = st.slider(
+                    f"Target Word Count", 
+                    min_value=100, 
+                    max_value=max(3000, (orig_count // 100 + 5) * 100), 
+                    value=int(current_target),
+                    step=100,
+                    key=f"len_{i}",
+                    help="Set the desired length for the updated chapter (in increments of 100 words)."
+                )
+                st.session_state.chapters[i]['target_length'] = target_len
+                
+                st.caption(f"Original Length: {orig_count} words | AI Summary: {chapter['summary']}")
             
             with col2:
                 if st.button("🗑️ Remove", key=f"del_{i}"):
@@ -205,7 +241,9 @@ elif st.session_state.step == "REVIEW":
             "content": "(Empty - will be generated from scratch using research)",
             "summary": "Manual addition",
             "topic": "Describe the subject for deep research here...",
-            "timeframe": config.DEFAULT_TIMEFRAME
+            "timeframe": config.DEFAULT_TIMEFRAME,
+            "original_word_count": 500,
+            "target_length": 500
         })
         st.rerun()
 
@@ -237,7 +275,12 @@ elif st.session_state.step == "PROCESSING":
             time.sleep(config.API_DELAY) # Delay between research and writing
             
             # Update
-            updated_text = updater.update_chapter(chapter['content'], findings, st.session_state.api_key)
+            updated_text = updater.update_chapter(
+                chapter['content'], 
+                findings, 
+                st.session_state.api_key,
+                target_length=chapter.get('target_length', 500)
+            )
             
             st.session_state.processed_results[i] = updated_text
             st.session_state.source_metadata[i] = sources_meta

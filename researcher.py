@@ -95,6 +95,50 @@ def search_openalex(topic, api_key, max_results=10):
         
     return findings, sources
 
+from urllib.parse import urlparse
+
+def resolve_google_redirect(url):
+    """
+    Follows redirects for Google search grounding links to get the final destination.
+    """
+    if "vertexaisearch.cloud.google.com" not in url:
+        return url
+        
+    try:
+        logger.debug(f"Resolving redirect: {url[:100]}...")
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+        response = requests.get(url, headers=headers, timeout=5, allow_redirects=True)
+        return response.url
+    except Exception as e:
+        logger.warning(f"Failed to resolve redirect {url[:50]}: {e}")
+        return url # Fallback to original
+
+def fetch_page_title(url, current_title=None):
+    """
+    Fetches the actual HTML <title> if the current one is generic or missing.
+    """
+    # If we already have a decent title that isn't just a URL or very short
+    if current_title and len(current_title) > 10 and not current_title.startswith("http"):
+        return current_title
+        
+    try:
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+        response = requests.get(url, headers=headers, timeout=5)
+        if response.status_code == 200:
+            import re
+            title_match = re.search(r'<title>(.*?)</title>', response.text, re.IGNORECASE | re.DOTALL)
+            if title_match:
+                return title_match.group(1).strip()
+    except:
+        pass
+        
+    # Fallback to domain name if everything fails
+    try:
+        domain = urlparse(url).netloc
+        return f"Source from {domain}"
+    except:
+        return current_title or "Web Source"
+
 def perform_research(topic, timeframe, api_key, enabled_sources=None):
     """
     Performs research on a topic across multiple sources.
@@ -135,9 +179,13 @@ def perform_research(topic, timeframe, api_key, enabled_sources=None):
                     if hasattr(metadata, 'grounding_chunks') and metadata.grounding_chunks:
                         for chunk in metadata.grounding_chunks:
                             if hasattr(chunk, 'web') and chunk.web:
+                                # FIX: Resolve redirect and fetch better titles
+                                final_url = resolve_google_redirect(chunk.web.uri)
+                                final_title = fetch_page_title(final_url, chunk.web.title)
+                                
                                 all_sources.append({
-                                    "title": chunk.web.title,
-                                    "url": chunk.web.uri
+                                    "title": final_title,
+                                    "url": final_url
                                 })
         except Exception as e:
             logger.error(f"Web research failed: {e}")
