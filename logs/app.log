@@ -28389,3 +28389,395 @@ google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'messa
 2026-01-08 10:24:23,381 - urllib3.connectionpool - DEBUG - https://time.com:443 "GET /6547982/3-big-ai-innovations-from-2023/) HTTP/1.1" 301 0
 2026-01-08 10:24:23,383 - urllib3.connectionpool - DEBUG - Resetting dropped connection: time.com
 2026-01-08 10:24:23,889 - urllib3.connectionpool - DEBUG - https://time.com:443 "GET /6547982/3-big-ai-innovations-from-2023/)/ HTTP/1.1" 406 None
+2026-01-08 10:28:58,492 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:28:58,492 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:28:58,493 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:28:58,493 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:28:58,603 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:28:58,603 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:28:58,603 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:28:58,603 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:03,343 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:03,343 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:03,343 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:03,343 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:03,345 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:03,345 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:03,345 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:03,346 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:06,614 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:06,614 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:06,614 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:06,614 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:06,616 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:06,616 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:06,616 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:06,616 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:16,033 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:16,034 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:16,034 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:16,034 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:16,035 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:16,036 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:16,036 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:16,036 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:16,089 - processor - INFO - Starting batch analysis for 3 chapters
+2026-01-08 10:29:16,479 - processor - DEBUG - Sending batch analysis prompt to gemini-2.5-flash
+2026-01-08 10:29:16,479 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:29:16,481 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 10:29:16,503 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF467AE050>
+2026-01-08 10:29:16,503 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002AF2C9C5520> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 10:29:16,596 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF467AE010>
+2026-01-08 10:29:16,597 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:29:16,597 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:29:16,597 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:29:16,597 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:29:16,597 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:29:17,471 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 503, b'Service Unavailable', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:29:18 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=851'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:29:17,472 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-01-08 10:29:17,472 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:29:17,472 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:29:17,472 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:29:17,473 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:29:17,473 - processor - ERROR - Error in batch analysis: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-01-08 10:29:17,473 - processor - ERROR - 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "F:\Horizon\report_updater_elisha_v1\processor.py", line 93, in analyze_all_chapters
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\models.py", line 5203, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\models.py", line 3985, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1224, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1201, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\errors.py", line 121, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\errors.py", line 148, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-01-08 10:29:17,477 - __main__ - INFO - Report structure analysis finalized
+2026-01-08 10:29:17,540 - httpcore.connection - DEBUG - close.started
+2026-01-08 10:29:17,541 - httpcore.connection - DEBUG - close.complete
+2026-01-08 10:29:17,547 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:17,547 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:17,549 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:17,549 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:17,550 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:17,551 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:17,551 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:17,551 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:31,722 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:31,722 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:31,722 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:31,722 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:31,723 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:31,723 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:31,723 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:31,723 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:31,786 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:31,786 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:31,786 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:31,786 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:31,787 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:31,787 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:31,787 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:29:31,787 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:29:31,789 - researcher - INFO - Researching 'Analysis failed.' via sources: ['Web Search', 'Academic Papers']
+2026-01-08 10:29:32,170 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:29:32,170 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 10:29:32,186 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF46877150>
+2026-01-08 10:29:32,186 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002AF2C9C45F0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 10:29:32,252 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF46876CD0>
+2026-01-08 10:29:32,252 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:29:32,252 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:29:32,252 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:29:32,252 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:29:32,252 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:29:57,464 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:29:58 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=25197'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:29:57,466 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-01-08 10:29:57,466 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:29:57,466 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:29:57,466 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:29:57,466 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:29:57,466 - researcher - INFO - Searching OpenAlex for: Analysis failed.
+2026-01-08 10:29:57,469 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openalex.org:443
+2026-01-08 10:29:58,935 - urllib3.connectionpool - DEBUG - https://api.openalex.org:443 "GET /works?search=Analysis%20failed.&per_page=10&mailto=your-email@example.com HTTP/1.1" 200 None
+2026-01-08 10:29:59,744 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:29:59,745 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 10:29:59,756 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF46941E50>
+2026-01-08 10:29:59,757 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002AF468B4DD0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 10:29:59,818 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF46941E10>
+2026-01-08 10:29:59,818 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:29:59,820 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:29:59,820 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:29:59,820 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:29:59,820 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:05,377 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:30:06 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=5543'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:30:05,377 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-01-08 10:30:05,377 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:30:05,379 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:30:05,379 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:30:05,379 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:30:05,379 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:30:05,380 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:05,380 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:30:05,380 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:30:05,381 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:30:05,381 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:11,752 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:30:13 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=6360'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:30:11,753 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-01-08 10:30:11,753 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:30:11,753 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:30:11,753 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:30:11,753 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:30:11,754 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:30:11,754 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:11,754 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:30:11,754 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:30:11,755 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:30:11,755 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:16,193 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 503, b'Service Unavailable', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:30:17 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=4415'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:30:16,194 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-01-08 10:30:16,195 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:30:16,195 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:30:16,195 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:30:16,195 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:30:16,195 - researcher - ERROR - OpenAlex search failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-01-08 10:30:18,196 - updater - INFO - Updating chapter content with research findings
+2026-01-08 10:30:18,654 - updater - DEBUG - Sending writing prompt to gemini-2.5-flash
+2026-01-08 10:30:18,654 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:30:18,654 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 10:30:18,666 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF4694DF50>
+2026-01-08 10:30:18,666 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002AF468B51C0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 10:30:18,731 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF4694DF10>
+2026-01-08 10:30:18,731 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:18,731 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:30:18,734 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:30:18,734 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:30:18,734 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:25,435 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:30:26 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=6692'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:30:25,435 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-01-08 10:30:25,435 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:30:25,435 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:30:25,435 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:30:25,435 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:30:25,436 - updater - INFO - Chapter update successful
+2026-01-08 10:30:25,436 - httpcore.connection - DEBUG - close.started
+2026-01-08 10:30:25,436 - httpcore.connection - DEBUG - close.complete
+2026-01-08 10:30:27,438 - researcher - INFO - Researching 'Analysis failed.' via sources: ['Web Search', 'Academic Papers']
+2026-01-08 10:30:27,790 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:30:27,791 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 10:30:27,802 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF4695C0D0>
+2026-01-08 10:30:27,802 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002AF466CBF50> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 10:30:27,866 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF4694FF90>
+2026-01-08 10:30:27,866 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:27,866 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:30:27,866 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:30:27,867 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:30:27,867 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:50,305 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:30:51 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=22422'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:30:50,305 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-01-08 10:30:50,305 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:30:50,338 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:30:50,338 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:30:50,339 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:30:50,339 - researcher - INFO - Searching OpenAlex for: Analysis failed.
+2026-01-08 10:30:50,341 - httpcore.connection - DEBUG - close.started
+2026-01-08 10:30:50,341 - httpcore.connection - DEBUG - close.complete
+2026-01-08 10:30:50,343 - httpcore.connection - DEBUG - close.started
+2026-01-08 10:30:50,343 - httpcore.connection - DEBUG - close.complete
+2026-01-08 10:30:50,346 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openalex.org:443
+2026-01-08 10:30:51,779 - urllib3.connectionpool - DEBUG - https://api.openalex.org:443 "GET /works?search=Analysis%20failed.&per_page=10&mailto=your-email@example.com HTTP/1.1" 200 None
+2026-01-08 10:30:52,543 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:30:52,545 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 10:30:52,558 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF4691C410>
+2026-01-08 10:30:52,559 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002AF468B4710> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 10:30:52,621 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF4691C3D0>
+2026-01-08 10:30:52,621 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:52,621 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:30:52,621 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:30:52,621 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:30:52,621 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:56,887 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 503, b'Service Unavailable', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:30:58 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=4257'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:30:56,887 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-01-08 10:30:56,887 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:30:56,887 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:30:56,887 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:30:56,887 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:30:56,887 - researcher - ERROR - OpenAlex search failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-01-08 10:30:58,892 - updater - INFO - Updating chapter content with research findings
+2026-01-08 10:30:59,237 - updater - DEBUG - Sending writing prompt to gemini-2.5-flash
+2026-01-08 10:30:59,237 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:30:59,237 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 10:30:59,249 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF46933F90>
+2026-01-08 10:30:59,249 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002AF2C9C7F50> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 10:30:59,317 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF4691D090>
+2026-01-08 10:30:59,317 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:30:59,317 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:30:59,317 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:30:59,317 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:30:59,317 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:31:00,200 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 503, b'Service Unavailable', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:31:01 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=871'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:31:00,202 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-01-08 10:31:00,202 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:31:00,202 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:31:00,202 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:31:00,202 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:31:00,203 - updater - ERROR - Failed to update chapter: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-01-08 10:31:00,203 - updater - ERROR - 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "F:\Horizon\report_updater_elisha_v1\updater.py", line 55, in update_chapter
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\models.py", line 5203, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\models.py", line 3985, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1224, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1201, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\errors.py", line 121, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\errors.py", line 148, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-01-08 10:31:02,205 - researcher - INFO - Researching 'Analysis failed.' via sources: ['Web Search', 'Academic Papers']
+2026-01-08 10:31:02,632 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:31:02,634 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 10:31:02,645 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF46930890>
+2026-01-08 10:31:02,645 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002AF2E151F40> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 10:31:02,711 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF469308D0>
+2026-01-08 10:31:02,713 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:31:02,713 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:31:02,713 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:31:02,713 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:31:02,713 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:31:06,718 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:31:08 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=3993'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:31:06,718 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-01-08 10:31:06,718 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:31:06,720 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:31:06,720 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:31:06,720 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:31:06,720 - researcher - INFO - Searching OpenAlex for: Analysis failed.
+2026-01-08 10:31:06,720 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openalex.org:443
+2026-01-08 10:31:07,600 - urllib3.connectionpool - DEBUG - https://api.openalex.org:443 "GET /works?search=Analysis%20failed.&per_page=10&mailto=your-email@example.com HTTP/1.1" 200 None
+2026-01-08 10:31:07,602 - httpcore.connection - DEBUG - close.started
+2026-01-08 10:31:07,602 - httpcore.connection - DEBUG - close.complete
+2026-01-08 10:31:07,603 - httpcore.connection - DEBUG - close.started
+2026-01-08 10:31:07,603 - httpcore.connection - DEBUG - close.complete
+2026-01-08 10:31:07,605 - httpcore.connection - DEBUG - close.started
+2026-01-08 10:31:07,605 - httpcore.connection - DEBUG - close.complete
+2026-01-08 10:31:08,353 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:31:08,354 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 10:31:08,389 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF4695CA50>
+2026-01-08 10:31:08,389 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002AF468B51C0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 10:31:08,452 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF4691B1D0>
+2026-01-08 10:31:08,452 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:31:08,452 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:31:08,453 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:31:08,453 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:31:08,453 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:31:13,364 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 503, b'Service Unavailable', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:31:14 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=4899'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:31:13,365 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-01-08 10:31:13,365 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:31:13,366 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:31:13,366 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:31:13,366 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:31:13,366 - researcher - ERROR - OpenAlex search failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-01-08 10:31:15,367 - updater - INFO - Updating chapter content with research findings
+2026-01-08 10:31:15,716 - updater - DEBUG - Sending writing prompt to gemini-2.5-flash
+2026-01-08 10:31:15,716 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 10:31:15,717 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 10:31:15,728 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF468A4D50>
+2026-01-08 10:31:15,728 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002AF468B4170> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 10:31:15,796 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002AF468A4D10>
+2026-01-08 10:31:15,796 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 10:31:15,796 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 10:31:15,797 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 10:31:15,797 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 10:31:15,797 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 10:31:21,845 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 08:31:23 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=6033'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 10:31:21,846 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-01-08 10:31:21,846 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 10:31:21,846 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 10:31:21,846 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 10:31:21,846 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 10:31:21,847 - updater - INFO - Chapter update successful
+2026-01-08 10:31:21,847 - httpcore.connection - DEBUG - close.started
+2026-01-08 10:31:21,847 - httpcore.connection - DEBUG - close.complete
+2026-01-08 10:31:21,882 - httpcore.connection - DEBUG - close.started
+2026-01-08 10:31:21,882 - httpcore.connection - DEBUG - close.complete
+2026-01-08 10:31:21,882 - httpcore.connection - DEBUG - close.started
+2026-01-08 10:31:21,882 - httpcore.connection - DEBUG - close.complete
+2026-01-08 10:31:21,889 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:31:21,890 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:31:21,890 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:31:21,890 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:31:21,891 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:31:21,891 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:31:21,891 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 10:31:21,891 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 10:31:21,900 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): doi.org:443
+2026-01-08 10:31:22,285 - urllib3.connectionpool - DEBUG - https://doi.org:443 "GET /10.2307/1164923 HTTP/1.1" 302 None
+2026-01-08 10:31:22,286 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.jstor.org:443
+2026-01-08 10:31:22,689 - urllib3.connectionpool - DEBUG - https://www.jstor.org:443 "GET /stable/1164923?origin=crossref HTTP/1.1" 403 5814
+2026-01-08 10:31:22,691 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): doi.org:443
+2026-01-08 10:31:23,036 - urllib3.connectionpool - DEBUG - https://doi.org:443 "GET /10.1073/pnas.012283399 HTTP/1.1" 302 None
+2026-01-08 10:31:23,037 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): pnas.org:443
+2026-01-08 10:31:23,252 - urllib3.connectionpool - DEBUG - https://pnas.org:443 "GET /doi/full/10.1073/pnas.012283399 HTTP/1.1" 403 None

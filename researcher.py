@@ -115,10 +115,10 @@ def resolve_google_redirect(url):
 
 def fetch_page_title(url, current_title=None):
     """
-    Fetches the actual HTML <title> if the current one is generic or missing.
+    Fetches the actual HTML <title> or <h1> or <og:title> if the current one is generic or missing.
     """
     # If we already have a decent title that isn't just a URL or very short
-    if current_title and len(current_title) > 10 and not current_title.startswith("http"):
+    if current_title and len(current_title) > 12 and not current_title.startswith("http") and not current_title.lower().startswith("source from"):
         return current_title
         
     try:
@@ -126,16 +126,37 @@ def fetch_page_title(url, current_title=None):
         response = requests.get(url, headers=headers, timeout=5)
         if response.status_code == 200:
             import re
-            title_match = re.search(r'<title>(.*?)</title>', response.text, re.IGNORECASE | re.DOTALL)
-            if title_match:
+            html = response.text
+            
+            # 1. Try <title> tag
+            title_match = re.search(r'<title>(.*?)</title>', html, re.IGNORECASE | re.DOTALL)
+            if title_match and len(title_match.group(1).strip()) > 3:
                 return title_match.group(1).strip()
-    except:
-        pass
+            
+            # 2. Try OpenGraph Title (very reliable for news/blogs)
+            og_match = re.search(r'property=["\']og:title["\']\s+content=["\'](.*?)["\']', html, re.IGNORECASE)
+            if not og_match:
+                 og_match = re.search(r'content=["\'](.*?)["\']\s+property=["\']og:title["\']', html, re.IGNORECASE)
+            if og_match and len(og_match.group(1).strip()) > 3:
+                return og_match.group(1).strip()
+                
+            # 3. Try <h1> tag
+            h1_match = re.search(r'<h1>(.*?)</h1>', html, re.IGNORECASE | re.DOTALL)
+            if h1_match and len(h1_match.group(1).strip()) > 3:
+                # Clean nested tags within h1
+                clean_h1 = re.sub(r'<.*?>', '', h1_match.group(1)).strip()
+                if clean_h1:
+                    return clean_h1
+
+    except Exception as e:
+        logger.debug(f"Title fetch failed for {url}: {e}")
         
     # Fallback to domain name if everything fails
     try:
         domain = urlparse(url).netloc
-        return f"Source from {domain}"
+        if domain.startswith("www."):
+            domain = domain[4:]
+        return f"Article from {domain.capitalize()}"
     except:
         return current_title or "Web Source"
 
