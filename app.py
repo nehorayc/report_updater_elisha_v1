@@ -7,11 +7,19 @@ import updater
 import validator
 import time
 import config
-from loguru import logger
+import logging
 
 # Configure main app logger
 os.makedirs("logs", exist_ok=True)
-logger.add("logs/app.log", rotation="10 MB", level="DEBUG")
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("logs/app.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 

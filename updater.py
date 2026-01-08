@@ -2,10 +2,17 @@ from google import genai
 import re
 import os
 import config
-from loguru import logger
+import logging
 
+# Ensure logs directory exists
 os.makedirs("logs", exist_ok=True)
-logger.add("logs/updater.log", rotation="10 MB", level="DEBUG")
+logger = logging.getLogger(__name__)
+if not logger.handlers:
+    fh = logging.FileHandler("logs/updater.log")
+    fh.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    fh.setFormatter(formatter)
+    logger.addHandler(fh)
 
 def update_chapter(original_content, research_findings, api_key, instructions=None):
     """

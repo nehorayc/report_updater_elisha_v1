@@ -3,14 +3,20 @@ from google.genai import types
 import os
 from dotenv import load_dotenv
 import config
-from loguru import logger
+import logging
+import requests
 
+# Ensure logs directory exists
 os.makedirs("logs", exist_ok=True)
-logger.add("logs/researcher.log", rotation="10 MB", level="DEBUG")
+logger = logging.getLogger(__name__)
+if not logger.handlers:
+    fh = logging.FileHandler("logs/researcher.log")
+    fh.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    fh.setFormatter(formatter)
+    logger.addHandler(fh)
 
 load_dotenv()
-
-import requests
 
 def search_openalex(topic, api_key, max_results=10):
     """
