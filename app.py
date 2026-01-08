@@ -70,7 +70,7 @@ def next_step(step):
 
 # Sidebar for API Configuration
 with st.sidebar:
-    st.image("logo.png", use_container_width=True)
+    st.image("logo.png", width="stretch")
     st.title("Settings")
     api_key_input = st.text_input("Gemini API Key", value=st.session_state.api_key, type="password")
     if api_key_input:
@@ -165,7 +165,7 @@ if st.session_state.step == "UPLOAD":
                         rounded_count = max(100, round(word_count / 100) * 100)
                         
                         analyzed_chapters.append({
-                            "id": i,
+                            "id": f"ch_{i}_{int(time.time()*1000)}",
                             "title": ch['title'],
                             "content": ch['content'],
                             "summary": analysis.get('summary', 'No summary'),
@@ -195,18 +195,19 @@ elif st.session_state.step == "REVIEW":
     st.write("Adjust the research topics or remove chapters you don't want to update.")
     
     for i, chapter in enumerate(st.session_state.chapters):
+        ch_id = chapter['id']
         with st.container():
             st.markdown(f'<div class="chapter-card">', unsafe_allow_html=True)
             col1, col2 = st.columns([4, 1])
             
             with col1:
-                title = st.text_input(f"Chapter Title", value=chapter['title'], key=f"title_{i}")
+                title = st.text_input(f"Chapter Title", value=chapter['title'], key=f"title_{ch_id}")
                 st.session_state.chapters[i]['title'] = title
                 
-                topic = st.text_area(f"Research Topic / Summary", value=chapter['topic'], key=f"topic_{i}", height=100)
+                topic = st.text_area(f"Research Topic / Summary", value=chapter['topic'], key=f"topic_{ch_id}", height=100)
                 st.session_state.chapters[i]['topic'] = topic
                 
-                tf = st.text_input(f"Cut-off Timeframe", value=chapter['timeframe'], key=f"tf_{i}")
+                tf = st.text_input(f"Cut-off Timeframe", value=chapter['timeframe'], key=f"tf_{ch_id}")
                 st.session_state.chapters[i]['timeframe'] = tf
                 
                 # Length Slider
@@ -220,7 +221,7 @@ elif st.session_state.step == "REVIEW":
                     max_value=max(3000, (orig_count // 100 + 5) * 100), 
                     value=int(current_target),
                     step=100,
-                    key=f"len_{i}",
+                    key=f"len_{ch_id}",
                     help="Set the desired length for the updated chapter (in increments of 100 words)."
                 )
                 st.session_state.chapters[i]['target_length'] = target_len
@@ -228,7 +229,7 @@ elif st.session_state.step == "REVIEW":
                 st.caption(f"Original Length: {orig_count} words | AI Summary: {chapter['summary']}")
             
             with col2:
-                if st.button("🗑️ Remove", key=f"del_{i}"):
+                if st.button("🗑️ Remove", key=f"del_{ch_id}"):
                     st.session_state.chapters.pop(i)
                     st.rerun()
             
@@ -236,7 +237,7 @@ elif st.session_state.step == "REVIEW":
 
     if st.button("➕ Add New Chapter"):
         st.session_state.chapters.append({
-            "id": len(st.session_state.chapters),
+            "id": f"manual_{int(time.time()*1000)}",
             "title": "New Chapter",
             "content": "(Empty - will be generated from scratch using research)",
             "summary": "Manual addition",

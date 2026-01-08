@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 import config
 import logging
 import requests
+from duckduckgo_search import DDGS
+from urllib.parse import urlparse
 
 # Ensure logs directory exists
 os.makedirs("logs", exist_ok=True)
@@ -17,6 +19,39 @@ if not logger.handlers:
     logger.addHandler(fh)
 
 load_dotenv()
+
+def search_web_ddg(topic, timeframe, max_results=8):
+    """
+    Searches DuckDuckGo for the latest news and information.
+    """
+    logger.info(f"Searching DuckDuckGo for: {topic} (since {timeframe})")
+    findings = ""
+    sources = []
+    
+    try:
+        # DDG search query with timeframe context
+        query = f"{topic} since {timeframe}"
+        with DDGS() as ddgs:
+            results = list(ddgs.text(query, max_results=max_results))
+            
+            if not results:
+                return "No web results found via DuckDuckGo.", []
+                
+            for i, r in enumerate(results):
+                title = r.get('title', 'No Title')
+                link = r.get('href', r.get('url', ''))
+                snippet = r.get('body', r.get('snippet', ''))
+                
+                findings += f"WEB SOURCE [{i+1}]: {title}\nURL: {link}\nCONTENT: {snippet}\n\n"
+                sources.append({
+                    "title": title,
+                    "url": link
+                })
+    except Exception as e:
+        logger.error(f"DuckDuckGo search failed: {e}")
+        return f"Error during web search: {e}", []
+        
+    return findings, sources
 
 def search_openalex(topic, api_key, max_results=10):
     """
@@ -64,7 +99,7 @@ def search_openalex(topic, api_key, max_results=10):
             if not abstract:
                 continue
                 
-            # AI Relevance Check
+            # AI Relevance Check (Low cost call)
             prompt = f"""
             Is the following academic paper abstract relevant to the topic: '{topic}'?
             Answer ONLY with 'YES' or 'NO'.
@@ -95,127 +130,29 @@ def search_openalex(topic, api_key, max_results=10):
         
     return findings, sources
 
-from urllib.parse import urlparse
-
-def resolve_google_redirect(url):
-    """
-    Follows redirects for Google search grounding links to get the final destination.
-    """
-    if "vertexaisearch.cloud.google.com" not in url:
-        return url
-        
-    try:
-        logger.debug(f"Resolving redirect: {url[:100]}...")
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
-        response = requests.get(url, headers=headers, timeout=5, allow_redirects=True)
-        return response.url
-    except Exception as e:
-        logger.warning(f"Failed to resolve redirect {url[:50]}: {e}")
-        return url # Fallback to original
-
-def fetch_page_title(url, current_title=None):
-    """
-    Fetches the actual HTML <title> or <h1> or <og:title> if the current one is generic or missing.
-    """
-    # If we already have a decent title that isn't just a URL or very short
-    if current_title and len(current_title) > 12 and not current_title.startswith("http") and not current_title.lower().startswith("source from"):
-        return current_title
-        
-    try:
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
-        response = requests.get(url, headers=headers, timeout=5)
-        if response.status_code == 200:
-            import re
-            html = response.text
-            
-            # 1. Try <title> tag
-            title_match = re.search(r'<title>(.*?)</title>', html, re.IGNORECASE | re.DOTALL)
-            if title_match and len(title_match.group(1).strip()) > 3:
-                return title_match.group(1).strip()
-            
-            # 2. Try OpenGraph Title (very reliable for news/blogs)
-            og_match = re.search(r'property=["\']og:title["\']\s+content=["\'](.*?)["\']', html, re.IGNORECASE)
-            if not og_match:
-                 og_match = re.search(r'content=["\'](.*?)["\']\s+property=["\']og:title["\']', html, re.IGNORECASE)
-            if og_match and len(og_match.group(1).strip()) > 3:
-                return og_match.group(1).strip()
-                
-            # 3. Try <h1> tag
-            h1_match = re.search(r'<h1>(.*?)</h1>', html, re.IGNORECASE | re.DOTALL)
-            if h1_match and len(h1_match.group(1).strip()) > 3:
-                # Clean nested tags within h1
-                clean_h1 = re.sub(r'<.*?>', '', h1_match.group(1)).strip()
-                if clean_h1:
-                    return clean_h1
-
-    except Exception as e:
-        logger.debug(f"Title fetch failed for {url}: {e}")
-        
-    # Fallback to domain name if everything fails
-    try:
-        domain = urlparse(url).netloc
-        if domain.startswith("www."):
-            domain = domain[4:]
-        return f"Article from {domain.capitalize()}"
-    except:
-        return current_title or "Web Source"
-
 def perform_research(topic, timeframe, api_key, enabled_sources=None):
     """
     Performs research on a topic across multiple sources.
-    enabled_sources: list of strings like ["Web Search", "Academic Papers"]
+    Uses DuckDuckGo for web and OpenAlex for academic (independent of Gemini's internal tools).
     """
     if enabled_sources is None:
         enabled_sources = ["Web Search"]
         
     logger.info(f"Researching '{topic}' via sources: {enabled_sources}")
-    client = genai.Client(api_key=api_key)
     
     all_findings = ""
     all_sources = []
     
-    # 1. Web Search
+    # 1. Web Search (Direct, no AI call here)
     if "Web Search" in enabled_sources:
-        prompt = f"""
-        Research the following topic: {topic}
-        Focus on events, data, and changes that occurred from {timeframe} until today (Late 2025).
-        Crucially, you MUST include specific URLs as sources for your information.
-        """
-        try:
-            response = client.models.generate_content(
-                model=config.MODEL_RESEARCH,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    tools=[types.Tool(google_search=types.GoogleSearch())],
-                    response_modalities=["TEXT"]
-                )
-            )
-            all_findings += f"WEB RESEARCH FINDINGS:\n{response.text}\n\n"
-            
-            # Extract web sources
-            if response and hasattr(response, 'candidates') and response.candidates:
-                candidate = response.candidates[0]
-                if hasattr(candidate, 'grounding_metadata') and candidate.grounding_metadata:
-                    metadata = candidate.grounding_metadata
-                    if hasattr(metadata, 'grounding_chunks') and metadata.grounding_chunks:
-                        for chunk in metadata.grounding_chunks:
-                            if hasattr(chunk, 'web') and chunk.web:
-                                # FIX: Resolve redirect and fetch better titles
-                                final_url = resolve_google_redirect(chunk.web.uri)
-                                final_title = fetch_page_title(final_url, chunk.web.title)
-                                
-                                all_sources.append({
-                                    "title": final_title,
-                                    "url": final_url
-                                })
-        except Exception as e:
-            logger.error(f"Web research failed: {e}")
-            all_findings += f"Error during web research: {e}\n\n"
+        web_findings, web_sources = search_web_ddg(topic, timeframe)
+        all_findings += f"WEB RESEARCH FINDINGS (Powered by DuckDuckGo):\n{web_findings}\n\n"
+        all_sources.extend(web_sources)
 
-    # 2. Academic Search
+    # 2. Academic Search (Independent API + 1 AI check per paper)
     if "Academic Papers" in enabled_sources:
         acad_findings, acad_sources = search_openalex(topic, api_key)
-        all_findings += f"ACADEMIC RESEARCH FINDINGS:\n{acad_findings}\n\n"
+        all_findings += f"ACADEMIC RESEARCH FINDINGS (Powered by OpenAlex):\n{acad_findings}\n\n"
         all_sources.extend(acad_sources)
     
     return all_findings, all_sources

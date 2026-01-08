@@ -28781,3 +28781,413 @@ google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'messa
 2026-01-08 10:31:23,036 - urllib3.connectionpool - DEBUG - https://doi.org:443 "GET /10.1073/pnas.012283399 HTTP/1.1" 302 None
 2026-01-08 10:31:23,037 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): pnas.org:443
 2026-01-08 10:31:23,252 - urllib3.connectionpool - DEBUG - https://pnas.org:443 "GET /doi/full/10.1073/pnas.012283399 HTTP/1.1" 403 None
+2026-01-08 13:02:57,401 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:02:57,402 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:02:57,402 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:02:57,402 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:02:57,597 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:02:57,597 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:02:57,597 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:02:57,597 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:02,186 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:02,186 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:02,186 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:02,186 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:02,187 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:02,187 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:02,187 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:02,188 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:05,315 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:05,315 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:05,315 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:05,315 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:05,317 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:05,317 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:05,318 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:05,318 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:05,373 - processor - INFO - Starting batch analysis for 3 chapters
+2026-01-08 13:03:06,077 - processor - DEBUG - Sending batch analysis prompt to gemini-2.5-flash
+2026-01-08 13:03:06,080 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 13:03:06,083 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 13:03:06,105 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001DDF7963410>
+2026-01-08 13:03:06,105 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001DDF777CF80> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 13:03:06,171 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001DDF79633D0>
+2026-01-08 13:03:06,173 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 13:03:06,173 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 13:03:06,174 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 13:03:06,174 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 13:03:06,174 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 13:03:10,047 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 11:03:12 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=3865'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 13:03:10,047 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-01-08 13:03:10,047 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 13:03:10,047 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 13:03:10,047 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 13:03:10,047 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 13:03:10,052 - processor - INFO - Batch analysis successful
+2026-01-08 13:03:10,052 - httpcore.connection - DEBUG - close.started
+2026-01-08 13:03:10,052 - httpcore.connection - DEBUG - close.complete
+2026-01-08 13:03:10,052 - __main__ - INFO - Report structure analysis finalized
+2026-01-08 13:03:10,110 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:10,110 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:10,112 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:10,112 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:10,113 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:10,113 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:10,113 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:10,113 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:18,667 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:18,667 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:18,667 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:18,667 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:18,668 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:18,669 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:18,669 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:18,669 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:18,734 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:18,734 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:18,734 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:18,734 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:18,736 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:18,736 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:18,736 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:18,736 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:23,898 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:23,899 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:23,899 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:23,899 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:23,900 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:23,900 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:23,900 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:23,901 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:23,968 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:23,968 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:23,968 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:23,969 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:23,970 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:23,970 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:23,970 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:23,971 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:23,973 - researcher - INFO - Researching 'This chapter introduces the recent surge in Artificial Intelligence's popularity, largely attributed to ChatGPT's release in late 2022. It sets the scope of the report, indicating that it will summarize the state of the industry. The report's information is current as of mid-2023.' via sources: ['Web Search']
+2026-01-08 13:03:23,973 - researcher - INFO - Searching DuckDuckGo for: This chapter introduces the recent surge in Artificial Intelligence's popularity, largely attributed to ChatGPT's release in late 2022. It sets the scope of the report, indicating that it will summarize the state of the industry. The report's information is current as of mid-2023. (since mid-2023)
+2026-01-08 13:03:23,980 - primp.utils - DEBUG - Loaded CA certs
+2026-01-08 13:03:23,982 - rquest.connect - DEBUG - starting new connection: https://www.bing.com/
+2026-01-08 13:03:23,982 - rquest.util.client.connect.dns - DEBUG - resolving www.bing.com
+2026-01-08 13:03:23,997 - rquest.util.client.connect.http - DEBUG - connecting to 82.102.152.155:443
+2026-01-08 13:03:24,006 - rquest.util.client.connect.http - DEBUG - connected to 82.102.152.155:443
+2026-01-08 13:03:24,025 - rquest.util.client.pool - DEBUG - pooling idle connection for PoolKey { uri: https://www.bing.com/, alpn_protos: None, network: default }
+2026-01-08 13:03:24,251 - cookie_store.cookie_store - DEBUG - inserting secure cookie 'MUID'
+2026-01-08 13:03:24,251 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("MUIDB=30F6B3A946B16F953401A57247046EB5; expires=Tue, 02-Feb-2027 11:03:26 GMT; path=/; HttpOnly"), name: Indexed(0, 5), value: Indexed(6, 38), expires: Some(DateTime(2027-02-02 11:03:26.0 +00:00:00)), max_age: None, domain: None, path: Some(Indexed(84, 85)), secure: None, http_only: Some(true), same_site: None, partitioned: None }'
+2026-01-08 13:03:24,251 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("_EDGE_S=F=1&SID=1FFB8BDC8A4267101D2A9D078BF7662F; domain=.bing.com; path=/; HttpOnly"), name: Indexed(0, 7), value: Indexed(8, 48), expires: None, max_age: None, domain: Some(Indexed(57, 66)), path: Some(Indexed(73, 74)), secure: None, http_only: Some(true), same_site: None, partitioned: None }'
+2026-01-08 13:03:24,252 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("_EDGE_V=1; domain=.bing.com; expires=Tue, 02-Feb-2027 11:03:26 GMT; path=/; HttpOnly"), name: Indexed(0, 7), value: Indexed(8, 9), expires: Some(DateTime(2027-02-02 11:03:26.0 +00:00:00)), max_age: None, domain: Some(Indexed(18, 27)), path: Some(Indexed(73, 74)), secure: None, http_only: Some(true), same_site: None, partitioned: None }'
+2026-01-08 13:03:24,252 - cookie_store.cookie_store - DEBUG - inserting secure cookie 'SRCHD'
+2026-01-08 13:03:24,252 - cookie_store.cookie_store - DEBUG - inserting secure cookie 'SRCHUID'
+2026-01-08 13:03:24,252 - cookie_store.cookie_store - DEBUG - inserting secure cookie 'SRCHUSR'
+2026-01-08 13:03:24,252 - cookie_store.cookie_store - DEBUG - inserting secure cookie 'SRCHHPGUSR'
+2026-01-08 13:03:24,252 - cookie_store.cookie_store - DEBUG - inserting secure cookie '_SS'
+2026-01-08 13:03:24,252 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("ak_bmsc=3CC418AED16282020229C2585027BE56~000000000000000000000000000000~YAAQp5hmUjiowIibAQAA2ZFGnR7AWlYvLe9yBV9xcDFugA36rScuxrX/nhdZ+jUp5guoEp2RzBwrEOLL6s/seQQSue8w9ffHd65jhEPdmf053OMmXSvG7wD+zXaqEir3wHOhmDt1EtmiNV2lSdIy7CAmqfBk5SPugQPjISN0t5kAGO0RFlB/KiuE9MmUsMGNn4TXCHnOuInOj65o7li9UtKZUkai51z0BHJNFyeig34kVIp2DROetFz5K2yxtihacnMo+XVycA9C8ao0kdZP2hM67UGXFA206nmMdhymVOvhM46zcOZrutbUMU6O9xOzcizVVertO7eE6zcZPetEWzG1sLxeXHvMCU5Z7bws/TYmJbxA6VdyYctrlJOn/mCCifNwhrMOIe95; Domain=.bing.com; Path=/; Expires=Thu, 08 Jan 2026 13:03:26 GMT; Max-Age=7200; HttpOnly"), name: Indexed(0, 7), value: Indexed(8, 468), expires: Some(DateTime(2026-01-08 13:03:26.0 +00:00:00)), max_age: Some(Duration { seconds: 7200, nanoseconds: 0 }), domain: Some(Indexed(477, 486)), path: Some(Indexed(493, 494)), secure: None, http_only: Some(true), same_site: None, partitioned: None }'
+2026-01-08 13:03:24,252 - primp - INFO - response: https://www.bing.com/search?q=This+chapter+introduces+the+recent+surge+in+Artificial+Intelligence%27s+popularity%2C+largely+attributed+to+ChatGPT%27s+release+in+late+2022.+It+sets+the+scope+of+the+report%2C+indicating+that+it+will+summarize+the+state+of+the+industry.+The+report%27s+information+is+current+as+of+mid-2023.+since+mid-2023 200
+2026-01-08 13:03:24,253 - duckduckgo_search.DDGS - DEBUG - _get_url() https://www.bing.com/search?q=This+chapter+introduces+the+recent+surge+in+Artificial+Intelligence%27s+popularity%2C+largely+attributed+to+ChatGPT%27s+release+in+late+2022.+It+sets+the+scope+of+the+report%2C+indicating+that+it+will+summarize+the+state+of+the+industry.+The+report%27s+information+is+current+as+of+mid-2023.+since+mid-2023 200
+2026-01-08 13:03:26,326 - updater - INFO - Updating chapter content with research findings
+2026-01-08 13:03:26,730 - updater - DEBUG - Sending writing prompt to gemini-2.5-flash
+2026-01-08 13:03:26,730 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 13:03:26,730 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 13:03:26,743 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001DDF7977650>
+2026-01-08 13:03:26,743 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001DDF78E2720> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 13:03:26,808 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001DDF79E5B90>
+2026-01-08 13:03:26,809 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 13:03:26,809 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 13:03:26,809 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 13:03:26,809 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 13:03:26,809 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 13:03:26,916 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 11:03:29 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=84'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 13:03:26,916 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 403 Forbidden"
+2026-01-08 13:03:26,917 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 13:03:26,917 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 13:03:26,917 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 13:03:26,917 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 13:03:26,917 - updater - ERROR - Failed to update chapter: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}
+2026-01-08 13:03:26,918 - updater - ERROR - 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}
+Traceback (most recent call last):
+  File "F:\Horizon\report_updater_elisha_v1\updater.py", line 55, in update_chapter
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\models.py", line 5203, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\models.py", line 3985, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1224, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1201, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\errors.py", line 121, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\errors.py", line 146, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}
+2026-01-08 13:03:29,006 - researcher - INFO - Researching 'This chapter discusses the landscape of Large Language Models (LLMs), highlighting GPT-4 as the current state-of-the-art as of early 2023. It also mentions other significant models from Google (Bard) and Meta (Llama 1), which is intended for research. The chapter notes that the industry's focus is on increasing model scale and parameter counts.' via sources: ['Web Search']
+2026-01-08 13:03:29,006 - researcher - INFO - Searching DuckDuckGo for: This chapter discusses the landscape of Large Language Models (LLMs), highlighting GPT-4 as the current state-of-the-art as of early 2023. It also mentions other significant models from Google (Bard) and Meta (Llama 1), which is intended for research. The chapter notes that the industry's focus is on increasing model scale and parameter counts. (since early 2023)
+2026-01-08 13:03:29,006 - primp.utils - DEBUG - Loaded CA certs
+2026-01-08 13:03:29,007 - rquest.connect - DEBUG - starting new connection: https://www.bing.com/
+2026-01-08 13:03:29,007 - rquest.util.client.connect.dns - DEBUG - resolving www.bing.com
+2026-01-08 13:03:29,008 - rquest.util.client.connect.http - DEBUG - connecting to 82.102.152.155:443
+2026-01-08 13:03:29,018 - rquest.util.client.connect.http - DEBUG - connected to 82.102.152.155:443
+2026-01-08 13:03:29,043 - rquest.util.client.pool - DEBUG - pooling idle connection for PoolKey { uri: https://www.bing.com/, alpn_protos: None, network: default }
+2026-01-08 13:03:29,248 - cookie_store.cookie_store - DEBUG - inserting secure cookie 'MUID'
+2026-01-08 13:03:29,248 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("MUIDB=1FAC26E494F162C32C32303F95B8634F; expires=Tue, 02-Feb-2027 11:03:31 GMT; path=/; HttpOnly"), name: Indexed(0, 5), value: Indexed(6, 38), expires: Some(DateTime(2027-02-02 11:03:31.0 +00:00:00)), max_age: None, domain: None, path: Some(Indexed(84, 85)), secure: None, http_only: Some(true), same_site: None, partitioned: None }'
+2026-01-08 13:03:29,248 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("_EDGE_S=F=1&SID=105F9CEE60846A92333F8A3561CD6B0A; domain=.bing.com; path=/; HttpOnly"), name: Indexed(0, 7), value: Indexed(8, 48), expires: None, max_age: None, domain: Some(Indexed(57, 66)), path: Some(Indexed(73, 74)), secure: None, http_only: Some(true), same_site: None, partitioned: None }'
+2026-01-08 13:03:29,248 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("_EDGE_V=1; domain=.bing.com; expires=Tue, 02-Feb-2027 11:03:31 GMT; path=/; HttpOnly"), name: Indexed(0, 7), value: Indexed(8, 9), expires: Some(DateTime(2027-02-02 11:03:31.0 +00:00:00)), max_age: None, domain: Some(Indexed(18, 27)), path: Some(Indexed(73, 74)), secure: None, http_only: Some(true), same_site: None, partitioned: None }'
+2026-01-08 13:03:29,248 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("SRCHD=AF=NOFORM; domain=.bing.com; expires=Sat, 08-Jan-2028 11:03:31 GMT; path=/"), name: Indexed(0, 5), value: Indexed(6, 15), expires: Some(DateTime(2028-01-08 11:03:31.0 +00:00:00)), max_age: None, domain: Some(Indexed(24, 33)), path: Some(Indexed(79, 80)), secure: None, http_only: None, same_site: None, partitioned: None }'
+2026-01-08 13:03:29,249 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("SRCHUID=V=2&GUID=9D8BEE4BE4154D7EB2BAE69747773B2B&dmnchg=1; domain=.bing.com; expires=Sat, 08-Jan-2028 11:03:31 GMT; path=/"), name: Indexed(0, 7), value: Indexed(8, 58), expires: Some(DateTime(2028-01-08 11:03:31.0 +00:00:00)), max_age: None, domain: Some(Indexed(67, 76)), path: Some(Indexed(122, 123)), secure: None, http_only: None, same_site: None, partitioned: None }'
+2026-01-08 13:03:29,249 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("SRCHUSR=DOB=20260108; domain=.bing.com; expires=Sat, 08-Jan-2028 11:03:31 GMT; path=/"), name: Indexed(0, 7), value: Indexed(8, 20), expires: Some(DateTime(2028-01-08 11:03:31.0 +00:00:00)), max_age: None, domain: Some(Indexed(29, 38)), path: Some(Indexed(84, 85)), secure: None, http_only: None, same_site: None, partitioned: None }'
+2026-01-08 13:03:29,249 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("SRCHHPGUSR=SRCHLANG=en&IG=A30CBB945A9B4D269355F41373EF458D; domain=.bing.com; expires=Sat, 08-Jan-2028 11:03:31 GMT; path=/"), name: Indexed(0, 10), value: Indexed(11, 58), expires: Some(DateTime(2028-01-08 11:03:31.0 +00:00:00)), max_age: None, domain: Some(Indexed(67, 76)), path: Some(Indexed(122, 123)), secure: None, http_only: None, same_site: None, partitioned: None }'
+2026-01-08 13:03:29,249 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("_SS=SID=105F9CEE60846A92333F8A3561CD6B0A; domain=.bing.com; path=/"), name: Indexed(0, 3), value: Indexed(4, 40), expires: None, max_age: None, domain: Some(Indexed(49, 58)), path: Some(Indexed(65, 66)), secure: None, http_only: None, same_site: None, partitioned: None }'
+2026-01-08 13:03:29,249 - cookie_store.cookie_store - DEBUG - inserting Set-Cookie 'Cookie { cookie_string: Some("ak_bmsc=AB21F42EBEAB8C26014902FAAFFE1FE7~000000000000000000000000000000~YAAQlphmUuDJKiybAQAAdKVGnR51h//ffdvlU+DyMOA6fuZHxgkBIgt+eUwLWtDbXxsNnzTCW4aC6/MgEQhkAM9Uuk4sIWIGyX7+QlHlqqoTRzARW5Y+SRzGdUHMMQ7D+HlQG1li3NSqIaG1OzqEfx0iSm/voR+dgjMnAGUU41JsLr3Ij0FNJl6Ky8o44mHsvE16O8D23lKcU/1ycQ3yYV8W7DJwe91EwlvoL7+5affvTP415S1jg8NK3s8PA0JKZakccVEnPIlmQAuOGQt6TUCwXw/eFAAxsSrZT2QzzZdELFr7Uxs1pP+alu9x+W6QJU2v2s4myLB3AKIJyEY+lwP0nYFUwz7r50Aj80fRmV2i5tVKI4+2kxHzdA65qsE53Ngo5q/xgWY=; Domain=.bing.com; Path=/; Expires=Thu, 08 Jan 2026 13:03:31 GMT; Max-Age=7200; HttpOnly"), name: Indexed(0, 7), value: Indexed(8, 468), expires: Some(DateTime(2026-01-08 13:03:31.0 +00:00:00)), max_age: Some(Duration { seconds: 7200, nanoseconds: 0 }), domain: Some(Indexed(477, 486)), path: Some(Indexed(493, 494)), secure: None, http_only: Some(true), same_site: None, partitioned: None }'
+2026-01-08 13:03:29,249 - primp - INFO - response: https://www.bing.com/search?q=This+chapter+discusses+the+landscape+of+Large+Language+Models+%28LLMs%29%2C+highlighting+GPT-4+as+the+current+state-of-the-art+as+of+early+2023.+It+also+mentions+other+significant+models+from+Google+%28Bard%29+and+Meta+%28Llama+1%29%2C+which+is+intended+for+research.+The+chapter+notes+that+the+industry%27s+focus+is+on+increasing+model+scale+and+parameter+counts.+since+early+2023 200
+2026-01-08 13:03:29,249 - duckduckgo_search.DDGS - DEBUG - _get_url() https://www.bing.com/search?q=This+chapter+discusses+the+landscape+of+Large+Language+Models+%28LLMs%29%2C+highlighting+GPT-4+as+the+current+state-of-the-art+as+of+early+2023.+It+also+mentions+other+significant+models+from+Google+%28Bard%29+and+Meta+%28Llama+1%29%2C+which+is+intended+for+research.+The+chapter+notes+that+the+industry%27s+focus+is+on+increasing+model+scale+and+parameter+counts.+since+early+2023 200
+2026-01-08 13:03:31,577 - updater - INFO - Updating chapter content with research findings
+2026-01-08 13:03:31,969 - updater - DEBUG - Sending writing prompt to gemini-2.5-flash
+2026-01-08 13:03:31,969 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 13:03:31,969 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 13:03:31,986 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001DDF7A63190>
+2026-01-08 13:03:31,986 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001DDF7A31D90> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 13:03:32,051 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001DDF7A63150>
+2026-01-08 13:03:32,051 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 13:03:32,052 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 13:03:32,052 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 13:03:32,052 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 13:03:32,052 - httpcore.connection - DEBUG - close.started
+2026-01-08 13:03:32,053 - httpcore.connection - DEBUG - close.complete
+2026-01-08 13:03:32,052 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 13:03:32,143 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 11:03:34 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=80'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 13:03:32,143 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 403 Forbidden"
+2026-01-08 13:03:32,143 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 13:03:32,144 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 13:03:32,144 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 13:03:32,144 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 13:03:32,144 - updater - ERROR - Failed to update chapter: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}
+2026-01-08 13:03:32,144 - updater - ERROR - 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}
+Traceback (most recent call last):
+  File "F:\Horizon\report_updater_elisha_v1\updater.py", line 55, in update_chapter
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\models.py", line 5203, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\models.py", line 3985, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1224, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1201, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\errors.py", line 121, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\errors.py", line 146, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}
+2026-01-08 13:03:32,196 - httpcore.connection - DEBUG - close.started
+2026-01-08 13:03:32,196 - httpcore.connection - DEBUG - close.complete
+2026-01-08 13:03:32,227 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:32,227 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:32,227 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:32,227 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:32,228 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:32,228 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:32,230 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:32,230 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:32,242 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tex.stackexchange.com:443
+2026-01-08 13:03:32,695 - urllib3.connectionpool - DEBUG - https://tex.stackexchange.com:443 "GET /questions/246804/centering-chapter-titles) HTTP/1.1" 200 None
+2026-01-08 13:03:32,697 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tex.stackexchange.com:443
+2026-01-08 13:03:33,140 - urllib3.connectionpool - DEBUG - https://tex.stackexchange.com:443 "GET /questions/604927/how-to-use-chapter-in-article-class) HTTP/1.1" 200 None
+2026-01-08 13:03:33,144 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tex.stackexchange.com:443
+2026-01-08 13:03:33,556 - urllib3.connectionpool - DEBUG - https://tex.stackexchange.com:443 "GET /questions/62516/how-to-suppress-chapter-in-chapter-while-keeping-numbering) HTTP/1.1" 200 None
+2026-01-08 13:03:33,558 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tex.stackexchange.com:443
+2026-01-08 13:03:33,961 - urllib3.connectionpool - DEBUG - https://tex.stackexchange.com:443 "GET /questions/745949/how-to-reference-appendix-tables-in-latex-with-chapter-based-numbering-e-g-ta) HTTP/1.1" 200 None
+2026-01-08 13:03:33,964 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tex.stackexchange.com:443
+2026-01-08 13:03:34,380 - urllib3.connectionpool - DEBUG - https://tex.stackexchange.com:443 "GET /questions/741432/scrreprt-how-to-add-chapter-and-section-in-header-when-sections-appear-otherw) HTTP/1.1" 200 None
+2026-01-08 13:03:34,383 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tex.stackexchange.com:443
+2026-01-08 13:03:34,782 - urllib3.connectionpool - DEBUG - https://tex.stackexchange.com:443 "GET /questions/734572/different-chapter-formatting) HTTP/1.1" 200 None
+2026-01-08 13:03:34,785 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tex.stackexchange.com:443
+2026-01-08 13:03:35,226 - urllib3.connectionpool - DEBUG - https://tex.stackexchange.com:443 "GET /questions/89914/chapter-name-in-the-header-with-chapter) HTTP/1.1" 200 None
+2026-01-08 13:03:35,228 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tex.stackexchange.com:443
+2026-01-08 13:03:35,676 - urllib3.connectionpool - DEBUG - https://tex.stackexchange.com:443 "GET /questions/585916/use-arabic-chapter-label-for-figure-and-table-if-chapter-use-numberstringchap) HTTP/1.1" 200 None
+2026-01-08 13:03:39,375 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:39,375 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:39,375 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:39,375 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:39,377 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:39,377 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:39,377 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:39,377 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:39,436 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:39,436 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:39,436 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:39,436 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:39,437 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:39,437 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:03:39,437 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:03:39,438 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:04:57,010 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:04:57,010 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:04:57,010 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:04:57,010 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:04:57,159 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:04:57,159 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:04:57,159 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:04:57,159 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:02,925 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:02,925 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:02,926 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:02,926 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:02,927 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:02,928 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:02,928 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:02,928 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:04,029 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:04,030 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:04,030 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:04,030 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:04,032 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:04,032 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:04,032 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:04,032 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:17,321 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:17,321 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:17,321 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:17,323 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:17,324 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:17,324 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:17,324 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:17,324 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:18,864 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:18,864 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:18,864 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:18,864 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:18,866 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:18,866 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:18,866 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:18,867 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:18,922 - processor - INFO - Starting batch analysis for 3 chapters
+2026-01-08 13:05:19,353 - processor - DEBUG - Sending batch analysis prompt to gemini-2.5-flash
+2026-01-08 13:05:19,355 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-01-08 13:05:19,356 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-01-08 13:05:19,395 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000025D2A377190>
+2026-01-08 13:05:19,395 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000025D104FBA40> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-01-08 13:05:19,458 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000025D2A377150>
+2026-01-08 13:05:19,460 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-01-08 13:05:19,460 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-01-08 13:05:19,460 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-01-08 13:05:19,461 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-01-08 13:05:19,461 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-01-08 13:05:20,000 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 503, b'Service Unavailable', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 08 Jan 2026 11:05:22 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=531'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-01-08 13:05:20,001 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-01-08 13:05:20,001 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-01-08 13:05:20,001 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-01-08 13:05:20,001 - httpcore.http11 - DEBUG - response_closed.started
+2026-01-08 13:05:20,002 - httpcore.http11 - DEBUG - response_closed.complete
+2026-01-08 13:05:20,002 - processor - ERROR - Error in batch analysis: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-01-08 13:05:20,002 - processor - ERROR - 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "F:\Horizon\report_updater_elisha_v1\processor.py", line 93, in analyze_all_chapters
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\models.py", line 5203, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\models.py", line 3985, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1224, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\_api_client.py", line 1201, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\errors.py", line 121, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "f:\Horizon\report_updater_elisha_v1\.venv\Lib\site-packages\google\genai\errors.py", line 148, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-01-08 13:05:20,006 - __main__ - INFO - Report structure analysis finalized
+2026-01-08 13:05:20,059 - httpcore.connection - DEBUG - close.started
+2026-01-08 13:05:20,060 - httpcore.connection - DEBUG - close.complete
+2026-01-08 13:05:20,065 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:20,065 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:20,065 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:20,065 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:20,066 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:20,067 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
+2026-01-08 13:05:20,067 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-01-08 13:05:20,067 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 12203
