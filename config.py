@@ -6,7 +6,7 @@ MODEL_RESEARCH = "gemini-2.5-flash"
 MODEL_WRITER = "gemini-2.5-flash"
 
 # Rate Limiting Settings
-API_DELAY = 2  # Seconds to sleep between calls
+API_DELAY = 10  # Seconds to sleep between calls
 
 # Research Settings
 DEFAULT_TIMEFRAME = "2023"

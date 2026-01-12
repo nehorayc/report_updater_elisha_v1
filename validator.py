@@ -6,7 +6,8 @@ def validate_links(text):
     Finds all URLs and checks if they return a 200 OK status.
     Returns (valid_count, broken_links)
     """
-    urls = list(set(re.findall(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', text)))
+    # Regex that matches URLs but excludes trailing punctuation (parentheses, dots, commas) often found in markdown
+    urls = list(set(re.findall(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+(?<![).,])', text)))
     broken_links = []
     valid_count = 0
     

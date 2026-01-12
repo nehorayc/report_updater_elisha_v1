@@ -64,6 +64,10 @@ if 'processed_results' not in st.session_state:
     st.session_state.processed_results = {}
 if 'source_metadata' not in st.session_state:
     st.session_state.source_metadata = {}
+if 'global_writing_style' not in st.session_state:
+    st.session_state.global_writing_style = "Professional"
+if 'global_language' not in st.session_state:
+    st.session_state.global_language = "English"
 
 def next_step(step):
     st.session_state.step = step
@@ -126,7 +130,9 @@ def regenerate_chapter(idx, instructions=None, sources_override=None):
             research_findings, 
             st.session_state.api_key, 
             instructions=instructions,
-            target_length=target_length
+            target_length=target_length,
+            writing_style=st.session_state.global_writing_style,
+            language=st.session_state.global_language
         )
         st.session_state.processed_results[idx] = updated_text
         st.session_state.source_metadata[idx] = sources_meta
@@ -157,7 +163,8 @@ if st.session_state.step == "UPLOAD":
                     for i, ch in enumerate(raw_chapters):
                         # Match analysis by index (safety check)
                         analysis = all_analysis[i] if i < len(all_analysis) else {
-                            "summary": "Analysis unavailable", "topic": ch['title'], "timeframe": "Unknown"
+                            "summary": "Analysis unavailable", "topic": ch['title'], "timeframe": "Unknown",
+                            "search_query": ch['title'], "writing_style": "Professional", "language": "English"
                         }
                         
                         word_count = len(ch['content'].split())
@@ -171,9 +178,18 @@ if st.session_state.step == "UPLOAD":
                             "summary": analysis.get('summary', 'No summary'),
                             "topic": analysis.get('summary', ch['title']), # Default topic to summary
                             "timeframe": analysis.get('timeframe', config.DEFAULT_TIMEFRAME),
+                            "search_query": analysis.get('search_query', ch['title']),
+                            "writing_style": analysis.get('writing_style', "Professional"),
+                            "language": analysis.get('language', "English"),
                             "original_word_count": word_count,
                             "target_length": rounded_count
                         })
+                        
+                    # Set global defaults from first chapter if available
+                    if analyzed_chapters:
+                        st.session_state.global_writing_style = analyzed_chapters[0].get('writing_style', "Professional")
+                        st.session_state.global_language = analyzed_chapters[0].get('language', "English")
+                        
                     st.session_state.chapters = analyzed_chapters
                     status.update(label="Analysis complete!", state="complete", expanded=False)
                     logger.info("Report structure analysis finalized")
@@ -192,6 +208,26 @@ if st.session_state.step == "UPLOAD":
 # --------------------------------------------------------------------------------
 elif st.session_state.step == "REVIEW":
     st.title("🔎 Step 2: Review & Edit Chapters")
+    
+    with st.container():
+        st.markdown("### 🌍 Global Report Settings")
+        gc1, gc2 = st.columns(2)
+        with gc1:
+            st.session_state.global_writing_style = st.text_input(
+                "Global Writing Style", 
+                value=st.session_state.global_writing_style,
+                help="The tone and style applied to all chapters (e.g., Formal, Casual, Academic)."
+            )
+        with gc2:
+            languages = ["English", "Hebrew", "Spanish", "French", "German", "Chinese", "Japanese", "Arabic", "Russian", "Portuguese"]
+            current_lang = st.session_state.global_language if st.session_state.global_language in languages else "English"
+            st.session_state.global_language = st.selectbox(
+                "Target Language",
+                options=languages,
+                index=languages.index(current_lang),
+                help="The language used for all generated chapters."
+            )
+    st.divider()
     st.write("Adjust the research topics or remove chapters you don't want to update.")
     
     for i, chapter in enumerate(st.session_state.chapters):
@@ -209,6 +245,10 @@ elif st.session_state.step == "REVIEW":
                 
                 tf = st.text_input(f"Cut-off Timeframe", value=chapter['timeframe'], key=f"tf_{ch_id}")
                 st.session_state.chapters[i]['timeframe'] = tf
+                
+                # New Fields (Keywords)
+                search_q = st.text_input(f"Search Keywords", value=chapter.get('search_query', ''), key=f"sq_{ch_id}", help="Exact query sent to search engines")
+                st.session_state.chapters[i]['search_query'] = search_q
                 
                 # Length Slider
                 orig_count = chapter.get('original_word_count', 500)
@@ -243,6 +283,9 @@ elif st.session_state.step == "REVIEW":
             "summary": "Manual addition",
             "topic": "Describe the subject for deep research here...",
             "timeframe": config.DEFAULT_TIMEFRAME,
+            "search_query": "New Subject",
+            "writing_style": "Professional",
+            "language": "English",
             "original_word_count": 500,
             "target_length": 500
         })
@@ -271,7 +314,8 @@ elif st.session_state.step == "PROCESSING":
                 chapter['topic'], 
                 chapter['timeframe'], 
                 st.session_state.api_key,
-                enabled_sources=research_sources
+                enabled_sources=research_sources,
+                search_query=chapter.get('search_query')
             )
             time.sleep(config.API_DELAY) # Delay between research and writing
             
@@ -280,7 +324,9 @@ elif st.session_state.step == "PROCESSING":
                 chapter['content'], 
                 findings, 
                 st.session_state.api_key,
-                target_length=chapter.get('target_length', 500)
+                target_length=chapter.get('target_length', 500),
+                writing_style=st.session_state.global_writing_style,
+                language=st.session_state.global_language
             )
             
             st.session_state.processed_results[i] = updated_text

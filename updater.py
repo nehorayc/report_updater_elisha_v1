@@ -14,7 +14,7 @@ if not logger.handlers:
     fh.setFormatter(formatter)
     logger.addHandler(fh)
 
-def update_chapter(original_content, research_findings, api_key, instructions=None, target_length=None):
+def update_chapter(original_content, research_findings, api_key, instructions=None, target_length=None, writing_style=None, language=None):
     """
     Rewrites a chapter using research findings and referencing the original document as [0].
     Also accepts optional user instructions and target length for fine-tuning.
@@ -24,6 +24,8 @@ def update_chapter(original_content, research_findings, api_key, instructions=No
     
     instruction_fragment = f"\nUSER INSTRUCTIONS / FINE-TUNING:\n{instructions}\n" if instructions else ""
     length_instruction = f"\nTARGET LENGTH: approximately {target_length} words." if target_length else ""
+    style_instruction = f"\nSTYLE: Accept the following writing style/tone: {writing_style}" if writing_style else ""
+    lang_instruction = f"\nLANGUAGE: Write the output in {language}." if language else ""
     
     prompt = f"""
     You are a professional report writer. Your task is to update a specific chapter of a report.
@@ -38,7 +40,7 @@ def update_chapter(original_content, research_findings, api_key, instructions=No
     3. You MUST cite the research findings using numerical indices (e.g., [1], [2], etc.) based on the sources provided in the research text.
     4. The updated chapter should logically transition from the old information to the new information.
     5. Ensure the tone is consistent and professional.
-    6. Include a "Sources for this chapter" section at the end of the text. {length_instruction}
+    6. Do NOT include a "Sources" or "Bibliography" section at the end. The bibliography will be generated separately. {length_instruction} {style_instruction} {lang_instruction}
     {instruction_fragment}
     
     ORIGINAL CONTENT [0]:

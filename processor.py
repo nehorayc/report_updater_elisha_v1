@@ -72,9 +72,12 @@ def analyze_all_chapters(chapters, api_key):
             "properties": {
                 "summary": {"type": "STRING", "description": "3-4 sentence summary of the chapter"},
                 "topic": {"type": "STRING", "description": "Main subject for deep research"},
-                "timeframe": {"type": "STRING", "description": "Latest timeframe or date mentioned"}
+                "timeframe": {"type": "STRING", "description": "Latest timeframe or date mentioned"},
+                "search_query": {"type": "STRING", "description": "Concise search keywords (max 5-7 words) for DuckDuckGo/OpenAlex"},
+                "writing_style": {"type": "STRING", "description": "The writing style/tone (e.g., Formal, Academic, Casual)"},
+                "language": {"type": "STRING", "description": "The language of the chapter (e.g., English, Hebrew, Spanish)"}
             },
-            "required": ["summary", "topic", "timeframe"]
+            "required": ["summary", "topic", "timeframe", "search_query", "writing_style", "language"]
         }
     }
     
@@ -83,6 +86,9 @@ def analyze_all_chapters(chapters, api_key):
     1. Provide a short summary.
     2. Identify the main subject for deep research.
     3. Identify the latest date or timeframe mentioned.
+    4. Generate concise search keywords (max 5-7 words) that would best find external information on this topic.
+    5. Identify the writing style/tone.
+    6. Identify the language.
     
     Chapters Data:
     {json.dumps(chapters_preview)}
